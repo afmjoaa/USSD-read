@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/mColorPrimary</item>
+        <item name="colorPrimaryDark">#212121</item>
+        <item name="colorPrimaryVariant">@color/mColorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/mColorOnPrimary</item>
+        <item name="colorSecondary">@color/mColorSecondary</item>
+        <item name="colorSecondaryVariant">@color/mColorSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/mColorOnSecondary</item>
+        <item name="colorError">@color/mColorError</item>
+        <item name="colorOnError">@color/mColorOnError</item>
+        <item name="colorSurface">@color/mColorSurface</item>
+        <item name="colorOnSurface">@color/mColorOnSurface</item>
+        <item name="android:colorBackground">@color/mColorBackground</item>
+        <item name="colorOnBackground">@color/mColorOnBackground</item>
+        <item name="colorAccent">@color/secondaryLight</item>
+    </style>
+
+    <style name="HeaderBar">
+        <item name="android:background">#212121</item>
+    </style>
+
+    <style name="MyTextApprncExp" parent="Base.TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">#f7f7f7</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+</resources>

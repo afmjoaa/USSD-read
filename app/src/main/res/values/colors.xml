@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorBackground">#f7f7f7</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="secondaryLight">#BF0288d1</color>
+
+    <!--material theme colors-->
+    <color name="mColorPrimary">#039be5</color>
+    <color name="mColorPrimaryVariant">#0288d1</color>
+    <color name="mColorOnPrimary">#FFFFFF</color>
+    <color name="mColorSecondary">#039be5</color>
+    <color name="mColorSecondaryVariant">#0285CC</color>
+    <color name="mColorOnSecondary">#FFFFFF</color>
+    <color name="mColorError">#ef5350</color>
+    <color name="mColorOnError">#FAFAFA</color>
+    <color name="mColorSurface">#FAFAFA</color>
+    <color name="mColorOnSurface">#01579b</color>
+    <color name="mColorBackground">#FAFAFA</color>
+    <color name="mColorOnBackground">#212121</color>
+    <color name="mStatusBar">#ffffff</color>
+    <color name="mTextBoxFill">#e1f5fe</color>
+
+</resources>
