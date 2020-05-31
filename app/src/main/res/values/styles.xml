@@ -17,6 +17,24 @@
         <item name="android:colorBackground">@color/mColorBackground</item>
         <item name="colorOnBackground">@color/mColorOnBackground</item>
         <item name="colorAccent">@color/secondaryLight</item>
+        <item name="shapeAppearanceSmallComponent">@style/AppShapeAppearance.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/AppShapeAppearance.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/AppShapeAppearance.MediumComponent</item>
+    </style>
+
+    <style name="AppShapeAppearance.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+
+    <style name="AppShapeAppearance.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">6dp</item>
+    </style>
+
+    <style name="AppShapeAppearance.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
     </style>
 
     <style name="HeaderBar">

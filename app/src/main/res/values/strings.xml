@@ -3,4 +3,6 @@
     <string name="accessibility_service_description">nothing</string>
     <string name="first_label">"API level 26 and up"</string>
     <string name="second_label">"API level below 26"</string>
+    <string name="first_sim" >Sim One</string>
+    <string name="second_sim">Sim Two</string>
 </resources>

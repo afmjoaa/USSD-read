@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cardView="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -11,13 +12,13 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/my_toolbar"
+            style="@style/HeaderBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            style="@style/HeaderBar"
             android:elevation="4dp"
+            app:title="USSD Demo"
             app:titleTextAppearance="@style/MyTextApprncExp"
-            app:titleTextColor="@color/white"
-            app:title="USSD Demo">
+            app:titleTextColor="@color/white">
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -26,7 +27,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
@@ -35,6 +37,8 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:hint="USSD Code"
             app:errorEnabled="true"
             app:startIconDrawable="@drawable/ic_code_black_24dp">
@@ -47,11 +51,77 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:id="@+id/select_sim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#f5f5f5"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="6dp"
+            android:text="Select Sim"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/mColorPrimaryVariant"
+            android:textSize="13sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGrpSim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:checkedButton="@+id/simOne"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/simOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/first_sim" />
+
+            <RadioButton
+                android:id="@+id/simTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/second_sim" />
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/obligation_or_claim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#f5f5f5"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="6dp"
+            android:text="Select API Level"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/mColorPrimaryVariant"
+            android:textSize="13sp" />
+
         <RadioGroup
             android:id="@+id/radioGrp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checkedButton="@+id/first"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:checkedButton="@+id/above"
             android:orientation="vertical">
 
             <RadioButton
@@ -67,16 +137,31 @@
                 android:text="@string/second_label" />
         </RadioGroup>
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/retrievedResult"
-            style="@style/Widget.MaterialComponents.Chip.Action"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="16dp"
-            android:text="Retrieved result will be here"
-            android:textColor="@color/white"
-            app:chipBackgroundColor="@color/secondaryLight" />
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="@color/secondaryLight"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/transparent"
+            app:strokeWidth="1dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/retrievedResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="10dp"
+                android:text="Retrieved result will be here"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.card.MaterialCardView>
+
 
     </LinearLayout>
 

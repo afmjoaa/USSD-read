@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
 
+import org.greenrobot.eventbus.EventBus;
+
 public class USSDService extends AccessibilityService {
 
-    static final String TAG = "joaa";
+    static final String TAG = "joaaussd";
 
     private String getEventType(AccessibilityEvent event) {
         switch (event.getEventType()) {
@@ -46,19 +48,20 @@ public class USSDService extends AccessibilityService {
                 getEventType(event), event.getClassName(), event.getPackageName(),
                 event.getEventTime(), getEventText(event)));
 
-       /* Log.i(TAG, text);
+        EventBus.getDefault().post(new UssdRunEvent(event.getClassName().toString(), event.getPackageName().toString(), event.getEventTime(),text));
+
+        /* Log.i(TAG, text);
         Intent intent = new Intent("REFRESH");
         intent.putExtra("message", text);
         sendBroadcast(intent);*/
 
-
-        if (event.getClassName().equals("android.app.AlertDialog")) {
+        /*if (event.getClassName().equals("android.app.AlertDialog")) {
             performGlobalAction(GLOBAL_ACTION_BACK); // this is removing the window after it comes
             Log.i(TAG, text);
             Intent intent = new Intent("REFRESH");
             intent.putExtra("message", text);
             sendBroadcast(intent);
-        }
+        }*/
     }
 
     @Override
@@ -69,7 +72,7 @@ public class USSDService extends AccessibilityService {
     @Override
     protected void onServiceConnected() {
         super.onServiceConnected();
-        Log.v(TAG, "onServiceConnected");
+        Log.v("joaaussd tagOne", "onServiceConnected");
         AccessibilityServiceInfo info = new AccessibilityServiceInfo();
         info.flags = AccessibilityServiceInfo.DEFAULT;
         info.packageNames = new String[]{"com.android.phone"};

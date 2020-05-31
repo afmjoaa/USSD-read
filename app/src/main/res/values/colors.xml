@@ -8,6 +8,11 @@
     <color name="white">#ffffff</color>
     <color name="secondaryLight">#BF0288d1</color>
 
+    <color name="badge_red">#DC3D3D</color>
+    <color name="badge_green">#61CF61</color>
+    <color name="transparent">#00000000</color>
+
+
     <!--material theme colors-->
     <color name="mColorPrimary">#039be5</color>
     <color name="mColorPrimaryVariant">#0288d1</color>
